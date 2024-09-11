@@ -73,5 +73,6 @@ public class Hotel {
 
     public void setRooms(Set<HotelRoom> rooms) {
         this.rooms = rooms;
+        rooms.forEach(room->room.setHotel(this));
     }
 }

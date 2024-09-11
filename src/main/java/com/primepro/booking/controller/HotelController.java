@@ -1,6 +1,8 @@
 package com.primepro.booking.controller;
 
+import com.primepro.booking.model.Amenities;
 import com.primepro.booking.model.HotelSearchData;
+import com.primepro.booking.model.RoomService;
 import com.primepro.booking.service.HotelService;
 import com.primepro.booking.model.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Arrays;
+import java.util.List;
 
 @RestController
 @RequestMapping("/hotel")
@@ -36,5 +41,13 @@ public class HotelController {
     public ResponseEntity<String> bookingHotel(){
         //
         return null;
+    }
+    @PostMapping("/loadHotelAmenities")
+    public ResponseEntity<List<Amenities>> loadHotelAmenities(){
+        return ResponseEntity.ok(Arrays.asList(Amenities.GYM,Amenities.SPA,Amenities.SWIMMING_POOL,Amenities.KIDS_PLAY_AREA));
+    }
+    @PostMapping("/loadHotelServices")
+    public ResponseEntity<List<RoomService>> loadHotelServices(){
+        return ResponseEntity.ok(Arrays.asList(RoomService.WIFI,RoomService.KITCHEN,RoomService.AIR_CONDITIONING));
     }
 }

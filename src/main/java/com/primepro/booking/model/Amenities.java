@@ -1,9 +1,7 @@
 package com.primepro.booking.model;
 
-public class Amenities {
-    private String gym;
-    private String kidsPlayArea;
-    private String spa;
-    private String swimmingPool;
+public enum Amenities {
+    GYM,KIDS_PLAY_AREA,SPA, SWIMMING_POOL
+
 
 }

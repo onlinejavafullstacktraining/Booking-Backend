@@ -11,7 +11,7 @@ public class HotelRoom {
     private String roomName;
     private double roomPrice;
     private boolean isAvailable;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="hotel_id", nullable=false)
     private Hotel hotel;
 

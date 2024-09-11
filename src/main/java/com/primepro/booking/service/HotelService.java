@@ -16,10 +16,10 @@ public class HotelService {
     private HotelRoomService hotelRoomService;
 
     public Hotel addHotel(Hotel hotel) {
-        Hotel save = hotelRepository.save(hotel);
         for (HotelRoom room : hotel.getRooms()) {
             hotelRoomService.saveHotelRoom(room);
         }
+        Hotel save = hotelRepository.save(hotel);
         return save;
     }
 }
