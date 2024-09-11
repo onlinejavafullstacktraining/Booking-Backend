@@ -1,5 +1,8 @@
-package com.primepro.booking;
+package com.primepro.booking.controller;
 
+import com.primepro.booking.model.HotelSearchData;
+import com.primepro.booking.service.HotelService;
+import com.primepro.booking.model.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

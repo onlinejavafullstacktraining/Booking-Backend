@@ -1,4 +1,6 @@
-package com.primepro.booking;
+package com.primepro.booking.model;
+
+import com.primepro.booking.model.Booking;
 
 public class UserProfile {
     private int userId;

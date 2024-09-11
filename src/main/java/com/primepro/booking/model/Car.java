@@ -1,4 +1,4 @@
-package com.primepro.booking;
+package com.primepro.booking.model;
 
 public class Car {
     private int carId;
